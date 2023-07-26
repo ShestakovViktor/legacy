@@ -1,0 +1,38 @@
+$border: 2px dashed black;
+$size: 16px;
+
+
+.node {
+	font-size: 24px;
+
+
+	.head {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 8px;
+
+		&::before {
+			content: '';
+			border-radius: 4px;
+		}
+	}
+
+	&.branch > .head::before, &.root > .head::before {
+		background-color: transparent;
+		border: 2px solid black;
+		width: 8px;
+		height: 8px;
+	}
+
+	&.leaf > .head::before {
+		background-color: black;
+		width: 4px;
+		height: 4px;
+	}
+
+	.body {
+		pointer-events: none;
+		padding-left: 48px;
+	}
+}

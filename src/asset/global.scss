@@ -1,0 +1,32 @@
+@import "vars";
+@import "mixin";
+
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    background-color: gainsboro;
+}
+
+
+button {
+    all: unset;
+    cursor: pointer;
+  
+    :focus {
+        outline: revert;
+    }
+}

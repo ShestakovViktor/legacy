@@ -1,0 +1,48 @@
+{
+	"compilerOptions": {
+		"target": "es2017",
+		"module": "CommonJs",
+		"rootDir": "./src",
+		"outDir": "./build",
+		"strict": true,
+		"jsx": "preserve",
+		"jsxImportSource": "solid-js",
+		"strictNullChecks": true,
+		"sourceMap": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"lib": [
+			"es6",
+			"dom",
+			"es2020.string"
+		],
+		"noEmit": true,
+		"allowImportingTsExtensions": true,
+		"downlevelIteration": true,
+		"moduleResolution": "node",
+		"noEmitOnError": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"baseUrl": "./",
+		"paths": {
+			"@src/*": [
+				"src/*"
+			],
+			"@feature/*": [
+				"src/feature/*"
+			],
+		}
+	},
+	"include": [
+		"**/*.ts",
+		"**/*.tsx",
+		"**/*.d.ts"
+	],
+	"exclude": [
+		"**/*.js"
+	],
+	"watchOptions": {
+		"watchDirectory": "useFsEvents"
+	},
+}

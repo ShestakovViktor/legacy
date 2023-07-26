@@ -1,0 +1,14 @@
+@import "mixin";
+
+.console {
+    @include card;
+    list-style-type: "> ";
+
+    .log {
+        background-color: hsla(0, 0%, 0%, 0.2);
+    }
+
+    .err {
+        background-color: hsla(0, 100%, 50%, 0.2);
+    }
+}
