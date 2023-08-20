@@ -1,0 +1,7 @@
+@import "mixin";
+
+.viewport {
+    @include card;
+
+    height: 100%;
+}

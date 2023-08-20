@@ -1,0 +1,29 @@
+@import "mixin";
+
+.sectionView {
+    display: flex;
+    flex-direction: row;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content auto;
+
+    grid-template-areas: 
+        "heading heading" 
+        "theory  exercise";
+
+    :nth-child(1) {grid-area: heading;}
+    :nth-child(2) {grid-area: theory;}
+    :nth-child(3) {grid-area: exercise;}
+
+    gap: 1em;
+    padding: 1em;
+    flex: 1;
+
+    .heading {
+        @include card;
+
+        display: flex;
+        justify-content: center;
+    }
+}

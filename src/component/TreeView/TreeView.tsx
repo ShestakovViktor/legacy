@@ -1,16 +1,17 @@
+import {Text} from "@src/type";
 import styles from "./TreeView.module.scss";
 import {JSXElement, createSignal, For, Show} from "solid-js";
 
 
 type Node = {
-    label: string;
+    title: string;
     children?: Node[];
 }
 
 type Props = {
     node: Node;
     lvl?: number;
-    onclick?: (selected: any) => void;
+    onClick?: (selected: any) => void;
 }
 
 export function TreeView(props: Props): JSXElement {
@@ -23,8 +24,8 @@ export function TreeView(props: Props): JSXElement {
         if (props.node.children) {
             setCollapsed(!isCollapsed());
         }
-        else if (props.onclick) {
-            props.onclick(props.node);
+        else if (props.onClick) {
+            props.onClick(props.node);
         }
     }
 
@@ -37,7 +38,7 @@ export function TreeView(props: Props): JSXElement {
             [styles.open]: !isCollapsed(),
         }}>
             <div class={styles.head} onClick={titleOnclick}>
-                {props.node.label}
+                {props.node.title}
             </div>
             <Show when={childs() && !isCollapsed()}>
                 <div class={styles.body}>
@@ -45,6 +46,7 @@ export function TreeView(props: Props): JSXElement {
                         <TreeView
                             node = {child}
                             lvl = {(props.lvl ?? 0) + 1}
+                            onClick={props.onClick}
                         />
                     }</For>
                 </div>

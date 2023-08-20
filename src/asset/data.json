@@ -1,0 +1,88 @@
+{
+    "exercise": [
+        {
+            "_id": "js:2wf4",
+            "text": {
+                "ru": "<h1>Перое упражнение</h1>",
+                "en": "<h1>First exercise</h1>"
+            },
+            "hints": [
+                {
+                    "ru": "Делай то",
+                    "en": "Do that"
+                },
+                {
+                    "ru": "Не делай это",
+                    "en": "Don't do that"
+                }
+            ],
+            "test": "console.log(\"Test\");",
+            "solution": "console.log(\"Hello world\");"
+        }
+    ],
+    "theory": [
+        {
+            "_id": "js:3q2J",
+            "title": {
+                "ru": "For in",
+                "en": "For in"
+            },
+            "text": {
+                "ru": "<p>\n    Переменные - это механизм х\n    Variable is mechanism for storing data while program is running.\n    In order to create a variable you have to wite:\n</p>\n\n<code>\n    let myVariable = 12;\n</code>\n\n<p>Where:</p>\n<ul>\n    <li>\n        let - ключевое слово для создания изменяемой переменной,\n    </li>\n    <li>\n        myVariable - имя переменной,\n    </li>\n    <li>\n        = - оператор присваивания,\n    </li>\n    <li>\n        12 - данные, которые будут хранится в переменной,\n    </li>\n    <li>\n        ; - разделитель инструкций.\n    </li>\n</ul>\n\n\n<p>\n    In JavaScript you have in your disposal several primitive data types\n    like numbers, strings and booleans.\n</p>\n\n<p>To set a number, you just need to specify it.</p>\n\n<code>\n    let a = 12;\n</code>\n\n<p>\n    To set a string as data for storing in variable,\n    you need wrap set of symbols in any type\n    of quotes (single, double or backslash).\n</p>\n\n<code>\n    let a = \"Hello world\";\n</code>\n\n<p>\n    Boolean type need for description of comparison\n    result in the form of true or false.\n</p>",
+                "en": "<p>\n    Variable is mechanism for storing data while program is running.\n    In order to create a variable you have to wite:\n</p>\n\n<code>\n    let myVariable = 12;\n</code>\n\n<p>Where:</p>\n<ul>\n    <li>\n        let - keyword to create a changeable variable,\n    </li>\n    <li>\n        myVariable - name of the variable,\n    </li>\n    <li>\n        = - assignment operator,\n    </li>\n    <li>\n        12 - data that will be storing in variable,\n    </li>\n    <li>\n        ; - line end symbol.\n    </li>\n</ul>\n\n\n<p>\n    In JavaScript you have in your disposal several primitive data types \n    like numbers, strings and booleans.\n</p>\n\n<p>To set a number, you just need to specify it.</p>\n\n<code>\n    let a = 12;\n</code>\n\n<p>\n    To set a string as data for storing in variable,\n    you need wrap set of symbols in any type\n    of quotes (single, double or backslash).\n</p>\n\n<code>\n    let a = \"Hello world\";\n</code>\n\n<p>\n    Boolean type need for description of comparison \n    result in the form of true or false.\n</p>\n"
+            }
+        },
+        {
+            "_id": "js:mq12",
+            "title": {
+                "ru": "While",
+                "en": "While"
+            },
+            "text": {
+                "ru": "<h1>Циклы while</h1>",
+                "en": "<h1>Cycle while<h1>"
+            }
+        }
+    ],
+    "section": [
+        {
+            "_id": "js:qwea",
+            "parentId": "js:root",
+            "title": {
+                "ru": "Переменные",
+                "en": "Variables"
+            }
+        },
+        {
+            "_id": "js:bwrr",
+            "parentId": "js:root",
+            "title": {
+                "ru": "Функции",
+                "en": "Functions"
+            }
+        },
+        {
+            "_id": "js:3fwv",
+            "parentId": "js:qwea",
+            "title": {
+                "ru": "Циклы",
+                "en": "Cycles"
+            },
+            "theoryIds": [
+                "js:3q2J",
+                "js:mq12"
+            ],
+            "exerciseIds": [
+                "js:2wf4"
+            ]
+        },
+        {
+            "_id": "js:root",
+            "parentId": "js:",
+            "title": {
+                "ru": "",
+                "en": ""
+            }
+        }
+    ]
+}

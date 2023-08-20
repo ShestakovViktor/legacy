@@ -1,2 +1,3 @@
 export * from "./TreeView";
-export * from "./TabPanel";
+export * from "./TabView";
+export * from "./PageVIew";

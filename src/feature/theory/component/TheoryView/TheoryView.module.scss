@@ -1,0 +1,7 @@
+@import "mixin";
+
+.theoryView {
+    height: 100%;
+
+    @include card;
+}

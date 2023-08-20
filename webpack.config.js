@@ -7,6 +7,7 @@ module.exports = {
 	output: {
 		path: path.join(__dirname, './build'),
 		filename: '[name].[fullhash].bundle.js',
+		publicPath: '/',
 	},
 	module: {
 		rules: [
@@ -41,13 +42,17 @@ module.exports = {
 					{
 						loader: "sass-loader",
 						options: {
-						  sassOptions: {
+							sassOptions: {
 								indentWidth: 4,
 								includePaths: [path.join(__dirname, 'src/asset')],
-						  	},
+							},
 						},
 					},
 				],
+			},
+			{
+				test: [/\.json$/,],
+				type: 'asset/source'
 			},
 		]
 	},

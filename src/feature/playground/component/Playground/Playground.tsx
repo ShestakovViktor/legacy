@@ -2,29 +2,46 @@ import styles from "./Playground.module.scss";
 
 import {JSXElement} from "solid-js";
 import {createStore} from "solid-js/store";
-import {TabPanel, TabItem} from "@src/component";
+import {TabView, TabItem} from "@src/component";
 
 import {
-    Viewport,
+    HtmlView,
+    CodeView,
     Editor,
     Sandbox,
     Console,
 } from "@feature/playground/component";
 
-export function Playground(): JSXElement {
+type Mode = "education";
+
+type Props = {
+    problem?: string;
+    solution?: string;
+    mode?: Mode;
+}
+
+export function Playground(props: Props): JSXElement {
     const [date, setState] = createStore<{code: string}>({code: ""});
 
     return (
         <div class={styles.playground}>
-            <TabPanel>
+            <TabView>
                 <TabItem title="Instructions">
-                    <Viewport />
+                    <HtmlView html={props.problem} />
+                </TabItem>
+
+                <TabItem title="Hints">
+                    <HtmlView html={props.solution} />
+                </TabItem>
+
+                <TabItem title="Solution">
+                    <CodeView html={props.solution} />
                 </TabItem>
 
                 <TabItem title="Output">
                     <Sandbox project={date} />
                 </TabItem>
-            </TabPanel>
+            </TabView>
 
             <Editor src={setState} />
             <Console />

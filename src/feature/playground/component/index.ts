@@ -1,4 +1,5 @@
-export * from "./Viewport";
+export * from "./HtmlView";
+export * from "./CodeView";
 export * from "./Editor";
 export * from "./Sandbox";
 export * from "./Console";

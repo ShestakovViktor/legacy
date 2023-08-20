@@ -1,30 +1,24 @@
 {
 	"compilerOptions": {
-		"target": "es2017",
-		"module": "CommonJs",
-		"rootDir": "./src",
-		"outDir": "./build",
-		"strict": true,
+		"allowImportingTsExtensions": true,
+		"baseUrl": "./",
+		"downlevelIteration": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
 		"jsx": "preserve",
 		"jsxImportSource": "solid-js",
-		"strictNullChecks": true,
-		"sourceMap": true,
-		"esModuleInterop": true,
-		"skipLibCheck": true,
-		"forceConsistentCasingInFileNames": true,
 		"lib": [
 			"es6",
 			"dom",
 			"es2020.string"
 		],
-		"noEmit": true,
-		"allowImportingTsExtensions": true,
-		"downlevelIteration": true,
+		"module": "CommonJs",
 		"moduleResolution": "node",
+		"noEmit": true,
 		"noEmitOnError": true,
 		"noImplicitAny": true,
 		"noImplicitReturns": true,
-		"baseUrl": "./",
+		"outDir": "./build",
 		"paths": {
 			"@src/*": [
 				"src/*"
@@ -32,7 +26,13 @@
 			"@feature/*": [
 				"src/feature/*"
 			],
-		}
+		},
+		"rootDir": ".",
+		"skipLibCheck": true,
+		"strict": true,
+		"strictNullChecks": true,
+		"sourceMap": true,
+		"target": "es2017"
 	},
 	"include": [
 		"**/*.ts",
